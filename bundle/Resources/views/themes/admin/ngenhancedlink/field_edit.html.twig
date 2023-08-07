@@ -20,12 +20,16 @@
 		{% if form.suffix is defined %}
 			{{- form_row(form.suffix, { disabled: is_translation }) -}}
 		{% endif %}
-		{{- form_row(form.label_internal, { disabled: is_translation }) -}}
+		{% if form.label_internal is defined %}
+			{{- form_row(form.label_internal, { disabled: is_translation }) -}}
+		{% endif %}
 		{{- form_row(form.target_internal, { disabled: is_translation }) -}}
 	</div>
 	<div class="external-link-form hidden">
 		{{- form_row(form.url, { disabled: is_translation }) -}}
-		{{- form_row(form.label_external, { disabled: is_translation }) -}}
+		{% if form.label_external is defined %}
+			{{- form_row(form.label_external, { disabled: is_translation }) -}}
+		{% endif %}
 		{{- form_row(form.target_external, { disabled: is_translation }) -}}
 	</div>
 {% endblock %}

@@ -8,6 +8,7 @@
         <h2>{{ 'field_definition.ngenhancedlink.section.root'|trans }}</h2>
         <hr>
 		{{- form_row(form.allowedLinkType, { disabled: is_translation, attr: { class: 'allowed-link-type' } }) -}}
+		{{- form_row(form.enableLabel, { disabled: is_translation }) -}}
 		<div class="internal-options">
 		    <hr>
 			<h3>{{ 'field_definition.ngenhancedlink.section.internal_options'|trans({  }) }}</h3>
