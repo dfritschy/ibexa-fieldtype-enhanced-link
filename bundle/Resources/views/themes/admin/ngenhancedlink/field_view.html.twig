@@ -27,9 +27,7 @@
                     {% endblock %}
                 {% endembed %}
                 <p>Type: internal</p>
-                {% if enabled_label or enabled_label is null %}
-                    <p>Label: {{ field.value.label }}</p>
-                {% endif %}
+                <p>Label: {{ field.value.label }}</p>
                 <p>Target: {{ field.value.target }}</p>
                 <p>Suffix: {{ field.value.suffix }}</p>
             {% endif %}
@@ -43,9 +41,7 @@
                 </h3>
                 <p>Type: external</p>
                 <p>URL: {{ field.value.reference }}</p>
-                {% if enabled_label or enabled_label is null %}
-                    <p>Label: {{ field.value.label }}</p>
-                {% endif %}
+                <p>Label: {{ field.value.label }}</p>
                 <p>Target: {{ field.value.target }}</p>
             {% endif %}
         </div>
