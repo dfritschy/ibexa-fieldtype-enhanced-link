@@ -77,6 +77,10 @@ class Type extends FieldType
             'type' => 'bool',
             'default' => true,
         ],
+        'enableLabel' => [
+            'type' => 'bool',
+            'default' => true,
+        ],
     ];
 
     private SPIContentHandler $handler;
@@ -141,6 +145,7 @@ class Type extends FieldType
 
                 case 'rootDefaultLocation':
                 case 'enableSuffix':
+                case 'enableLabel':
                     if (!is_bool($value)) {
                         $validationErrors[] = new ValidationError(
                             "Setting '%setting%' value must be of boolean type",

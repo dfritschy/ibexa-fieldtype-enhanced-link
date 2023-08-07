@@ -100,6 +100,10 @@ class FieldValueConverter implements Converter
         if (array_key_exists('enableSuffix', $settingsData)) {
             $fieldSettings['enableSuffix'] = $settingsData['enableSuffix'];
         }
+
+        if (array_key_exists('enableLabel', $settingsData)) {
+            $fieldSettings['enableLabel'] = $settingsData['enableLabel'];
+        }
     }
 
     public function getIndexColumn(): string
