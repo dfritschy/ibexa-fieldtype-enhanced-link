@@ -176,6 +176,7 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
+                    'enableLabel' => true,
                 ],
             ],
             [
@@ -195,6 +196,7 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => true,
+                    'enableLabel' => true,
                 ],
             ],
         ];
@@ -222,6 +224,7 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
+                    'enableLabel' => true,
                 ],
             ],
             [
@@ -243,6 +246,7 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
+                    'enableLabel' => true,
                 ],
             ],
             [
@@ -264,6 +268,7 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
+                    'enableLabel' => true,
                 ],
             ],
             [
@@ -285,6 +290,7 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
+                    'enableLabel' => true,
                 ],
             ],
             [
@@ -306,6 +312,29 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => 'invalid',
+                    'enableLabel' => true,
+                ],
+            ],
+            [
+                // Invalid enableLabel
+                [
+                    'selectionMethod' => Type::SELECTION_BROWSE,
+                    'selectionRoot' => null,
+                    'rootDefaultLocation' => false,
+                    'selectionContentTypes' => [],
+                    'allowedLinkType' => Type::LINK_TYPE_ALL,
+                    'allowedTargetsInternal' => [
+                        Type::TARGET_LINK,
+                        Type::TARGET_LINK_IN_NEW_TAB,
+                        Type::TARGET_EMBED,
+                        Type::TARGET_MODAL,
+                    ],
+                    'allowedTargetsExternal' => [
+                        Type::TARGET_LINK,
+                        Type::TARGET_LINK_IN_NEW_TAB,
+                    ],
+                    'enableSuffix' => false,
+                    'enableLabel' => 'invalid',
                 ],
             ],
             [
@@ -327,6 +356,7 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
+                    'enableLabel' => true,
                 ],
             ],
             [
@@ -348,6 +378,7 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
+                    'enableLabel' => true,
                 ],
             ],
             [
@@ -366,6 +397,7 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
+                    'enableLabel' => true,
                 ],
             ],
             [
@@ -386,6 +418,7 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         'invalid',
                     ],
                     'enableSuffix' => false,
+                    'enableLabel' => true,
                 ],
             ],
         ];
@@ -746,6 +779,10 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                 ],
             ],
             'enableSuffix' => [
+                'type' => 'bool',
+                'default' => true,
+            ],
+            'enableLabel' => [
                 'type' => 'bool',
                 'default' => true,
             ],

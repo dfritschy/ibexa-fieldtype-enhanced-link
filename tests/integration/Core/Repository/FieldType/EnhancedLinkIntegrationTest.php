@@ -115,6 +115,10 @@ class EnhancedLinkIntegrationTest extends BaseIntegrationTest
                 'type' => 'bool',
                 'default' => true,
             ],
+            'enableLabel' => [
+                'type' => 'bool',
+                'default' => true,
+            ],
         ];
     }
 
@@ -134,6 +138,7 @@ class EnhancedLinkIntegrationTest extends BaseIntegrationTest
             'allowedTargetsInternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB, Type::TARGET_EMBED, Type::TARGET_MODAL],
             'allowedTargetsExternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB],
             'enableSuffix' => false,
+            'enableLabel' => true,
         ];
     }
 
@@ -306,6 +311,7 @@ class EnhancedLinkIntegrationTest extends BaseIntegrationTest
                     'allowedTargetsInternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB, Type::TARGET_EMBED, Type::TARGET_MODAL],
                     'allowedTargetsExternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB],
                     'enableSuffix' => true,
+                    'enableLabel' => true,
                 ],
             ],
             'incomplete_settings' => [
@@ -323,6 +329,7 @@ class EnhancedLinkIntegrationTest extends BaseIntegrationTest
                     'allowedTargetsInternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB, Type::TARGET_EMBED, Type::TARGET_MODAL],
                     'allowedTargetsExternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB],
                     'enableSuffix' => true,
+                    'enableLabel' => true,
                 ],
             ],
         ];
