@@ -37,7 +37,8 @@
                 <h3>
                     {% if not ibexa_field_is_empty( content, field ) %}
                         <a href="{{ field.value.reference }}" {{ block( 'field_attributes' ) }}>
-                            {{ (enabled_label is null or enabled_label) and field.value.label ? field.value.label : field.value.reference }}                        </a>
+                            {{ field.value.label ? field.value.label : field.value.reference }}
+                        </a>
                     {% endif %}
                 </h3>
                 <p>Type: external</p>
