@@ -5,6 +5,7 @@ field_definition.ngenhancedlink.selection_allowed_targets.internal: "Allowed int
 field_definition.ngenhancedlink.selection_allowed_targets.external: "Allowed external targets"
 field_definition.ngenhancedlink.selection_allowed_link_type: "Allowed link types"
 field_definition.ngenhancedlink.enable_suffix: "Enable link suffix"
+field_definition.ngenhancedlink.enable_label: "Enable link label"
 field_definition.ngenhancedlink.target.link: "Link"
 field_definition.ngenhancedlink.target.link_new_tab: "Link in new tab"
 field_definition.ngenhancedlink.target.embed: "Embed"
