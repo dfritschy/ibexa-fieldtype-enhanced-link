@@ -93,14 +93,25 @@ class FieldValueType extends AbstractType
             );
         }
 
-        $builder->add(
-            'label_internal',
-            TextType::class,
-            [
-                'label' => /* @Desc("Text") */ 'ngenhancedlink.label',
-                'required' => false,
-            ],
-        );
+        if ($options['enable_label']) {
+            $builder->add(
+                'label_internal',
+                TextType::class,
+                [
+                    'label' => /* @Desc("Text") */ 'ngenhancedlink.label',
+                    'required' => false,
+                ],
+            );
+
+            $builder->add(
+                'label_external',
+                TextType::class,
+                [
+                    'label' => /* @Desc("Text") */ 'ngenhancedlink.label',
+                    'required' => false,
+                ],
+            );
+        }
 
         $builder->add(
             'target_internal',
@@ -124,15 +135,6 @@ class FieldValueType extends AbstractType
                 'attr' => [
                     'class' => $options['required'] ? 'external-required-field' : '',
                 ],
-            ],
-        );
-
-        $builder->add(
-            'label_external',
-            TextType::class,
-            [
-                'label' => /* @Desc("Text") */ 'ngenhancedlink.label',
-                'required' => false,
             ],
         );
 
@@ -204,12 +206,14 @@ class FieldValueType extends AbstractType
             'root_default_location' => null,
             'location' => null,
             'enable_suffix' => null,
+            'enable_label' => null,
             'target_internal' => [],
             'target_external' => [],
         ]);
         $resolver->setAllowedTypes('default_location', ['null', Location::class]);
         $resolver->setAllowedTypes('root_default_location', ['null', 'bool']);
         $resolver->setAllowedTypes('enable_suffix', ['null', 'bool']);
+        $resolver->setAllowedTypes('enable_label', ['null', 'bool']);
         $resolver->setAllowedTypes('location', ['null', Location::class]);
         $resolver->setAllowedTypes('target_internal', ['array']);
         $resolver->setAllowedTypes('target_external', ['array']);

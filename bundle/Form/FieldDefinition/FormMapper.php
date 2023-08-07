@@ -14,6 +14,8 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+use function array_key_exists;
+
 class FormMapper extends AbstractRelationFormMapper
 {
     public function mapFieldDefinitionForm(FormInterface $fieldDefinitionForm, FieldDefinitionData $data): void
@@ -58,6 +60,13 @@ class FormMapper extends AbstractRelationFormMapper
             'required' => false,
             'label' => /* @Desc("Enable suffix") */ 'field_definition.ngenhancedlink.enable_suffix',
             'property_path' => 'fieldSettings[enableSuffix]',
+        ]);
+
+        $fieldDefinitionForm->add('enableLabel', CheckboxType::class, [
+            'required' => false,
+            'label' => /* @Desc("Enable label") */ 'field_definition.ngenhancedlink.enable_label',
+            'property_path' => 'fieldSettings[enableLabel]',
+            'data' => $data->fieldSettings && array_key_exists('enableLabel', $data->fieldSettings) ? $data->fieldSettings['enableLabel'] : true,
         ]);
 
         $fieldDefinitionForm->add('allowedTargetsInternal', ChoiceType::class, [

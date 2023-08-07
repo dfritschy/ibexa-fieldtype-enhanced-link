@@ -30,6 +30,7 @@ class FieldValueFormMapper extends AbstractRelationFormMapper
                         ),
                         'root_default_location' => $fieldSettings['rootDefaultLocation'] ?? false,
                         'enable_suffix' => $fieldSettings['enableSuffix'] ?? false,
+                        'enable_label' => $fieldSettings['enableLabel'] ?? true,
                         'target_internal' => $fieldSettings['allowedTargetsInternal'] ?? [],
                         'target_external' => $fieldSettings['allowedTargetsExternal'] ?? [],
                     ],
