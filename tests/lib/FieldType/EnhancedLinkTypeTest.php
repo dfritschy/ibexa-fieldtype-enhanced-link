@@ -176,7 +176,8 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
             [
@@ -196,7 +197,8 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => true,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
         ];
@@ -224,7 +226,8 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
             [
@@ -246,7 +249,8 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
             [
@@ -268,7 +272,8 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
             [
@@ -290,7 +295,8 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
             [
@@ -312,7 +318,8 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => 'invalid',
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
             [
@@ -334,7 +341,8 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
-                    'enableLabel' => 'invalid',
+                    'enableLabelInternal' => 'invalid',
+                    'enableLabelExternal' => 'invalid',
                 ],
             ],
             [
@@ -356,7 +364,8 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
             [
@@ -378,7 +387,8 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
             [
@@ -397,7 +407,8 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         Type::TARGET_LINK_IN_NEW_TAB,
                     ],
                     'enableSuffix' => false,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
             [
@@ -418,7 +429,8 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                         'invalid',
                     ],
                     'enableSuffix' => false,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
         ];
@@ -782,7 +794,11 @@ class EnhancedLinkTypeTest extends FieldTypeTest
                 'type' => 'bool',
                 'default' => true,
             ],
-            'enableLabel' => [
+            'enableLabelInternal' => [
+                'type' => 'bool',
+                'default' => true,
+            ],
+            'enableLabelExternal' => [
                 'type' => 'bool',
                 'default' => true,
             ],

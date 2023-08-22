@@ -115,7 +115,11 @@ class EnhancedLinkIntegrationTest extends BaseIntegrationTest
                 'type' => 'bool',
                 'default' => true,
             ],
-            'enableLabel' => [
+            'enableLabelInternal' => [
+                'type' => 'bool',
+                'default' => true,
+            ],
+            'enableLabelExternal' => [
                 'type' => 'bool',
                 'default' => true,
             ],
@@ -138,7 +142,8 @@ class EnhancedLinkIntegrationTest extends BaseIntegrationTest
             'allowedTargetsInternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB, Type::TARGET_EMBED, Type::TARGET_MODAL],
             'allowedTargetsExternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB],
             'enableSuffix' => false,
-            'enableLabel' => true,
+            'enableLabelInternal' => true,
+            'enableLabelExternal' => true,
         ];
     }
 
@@ -311,7 +316,8 @@ class EnhancedLinkIntegrationTest extends BaseIntegrationTest
                     'allowedTargetsInternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB, Type::TARGET_EMBED, Type::TARGET_MODAL],
                     'allowedTargetsExternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB],
                     'enableSuffix' => true,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
             'incomplete_settings' => [
@@ -329,7 +335,8 @@ class EnhancedLinkIntegrationTest extends BaseIntegrationTest
                     'allowedTargetsInternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB, Type::TARGET_EMBED, Type::TARGET_MODAL],
                     'allowedTargetsExternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB],
                     'enableSuffix' => true,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
         ];

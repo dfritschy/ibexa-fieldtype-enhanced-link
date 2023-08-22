@@ -8,7 +8,6 @@
         <h2>{{ 'field_definition.ngenhancedlink.section.root'|trans }}</h2>
         <hr>
 		{{- form_row(form.allowedLinkType, { disabled: is_translation, attr: { class: 'allowed-link-type' } }) -}}
-		{{- form_row(form.enableLabel, { disabled: is_translation }) -}}
 		<div class="internal-options">
 		    <hr>
 			<h3>{{ 'field_definition.ngenhancedlink.section.internal_options'|trans({  }) }}</h3>
@@ -19,13 +18,15 @@
 			{{- form_row(form.selectionContentTypes, { disabled: is_translation }) -}}
 			{{- form_row(form.enableSuffix, { disabled: is_translation }) -}}
 			{{- form_row(form.allowedTargetsInternal, { disabled: is_translation, attr: { class: 'allowed-targets-internal' } }) -}}
-		</div>
+            {{- form_row(form.enableLabelInternal, { disabled: is_translation }) -}}
+        </div>
 		<div class="external-options">
 		    <hr>
 			<h3>{{ 'field_definition.ngenhancedlink.section.external_options'|trans }}</h3>
 			<hr>
 			{{- form_row(form.allowedTargetsExternal, { disabled: is_translation, attr: { class: 'allowed-targets-external' } }) -}}
-		</div>
+            {{- form_row(form.enableLabelExternal, { disabled: is_translation }) -}}
+        </div>
 	</div>
 	<hr>
 {% endblock %}

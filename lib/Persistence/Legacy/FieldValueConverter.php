@@ -101,8 +101,12 @@ class FieldValueConverter implements Converter
             $fieldSettings['enableSuffix'] = $settingsData['enableSuffix'];
         }
 
-        if (array_key_exists('enableLabel', $settingsData)) {
-            $fieldSettings['enableLabel'] = $settingsData['enableLabel'];
+        if (array_key_exists('enableLabelInternal', $settingsData)) {
+            $fieldSettings['enableLabelInternal'] = $settingsData['enableLabelInternal'];
+        }
+
+        if (array_key_exists('enableLabelExternal', $settingsData)) {
+            $fieldSettings['enableLabelExternal'] = $settingsData['enableLabelExternal'];
         }
     }
 

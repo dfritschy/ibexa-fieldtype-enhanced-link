@@ -77,7 +77,11 @@ class Type extends FieldType
             'type' => 'bool',
             'default' => true,
         ],
-        'enableLabel' => [
+        'enableLabelInternal' => [
+            'type' => 'bool',
+            'default' => true,
+        ],
+        'enableLabelExternal' => [
             'type' => 'bool',
             'default' => true,
         ],
@@ -145,7 +149,8 @@ class Type extends FieldType
 
                 case 'rootDefaultLocation':
                 case 'enableSuffix':
-                case 'enableLabel':
+                case 'enableLabelExternal':
+                case 'enableLabelInternal':
                     if (!is_bool($value)) {
                         $validationErrors[] = new ValidationError(
                             "Setting '%setting%' value must be of boolean type",

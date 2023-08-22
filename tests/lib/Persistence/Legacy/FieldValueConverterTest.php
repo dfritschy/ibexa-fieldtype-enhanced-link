@@ -42,7 +42,8 @@ class FieldValueConverterTest extends TestCase
                             'allowedTargetsInternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB, Type::TARGET_EMBED, Type::TARGET_MODAL],
                             'allowedTargetsExternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB],
                             'enableSuffix' => false,
-                            'enableLabel' => true,
+                            'enableLabelInternal' => true,
+                            'enableLabelExternal' => true,
                         ],
                     ],
                 ),
@@ -72,7 +73,8 @@ class FieldValueConverterTest extends TestCase
                     "link_new_tab"
                 ],
                 "enableSuffix": false,
-                "enableLabel": true
+                "enableLabelInternal": true,
+                "enableLabelExternal": true
             }
             DATATEXT;
 
@@ -110,7 +112,8 @@ class FieldValueConverterTest extends TestCase
                     "link_new_tab"
                 ],
                 "enableSuffix": false,
-                "enableLabel": true
+                "enableLabelInternal": true
+                "enableLabelExternal": true
             }
             DATATEXT;
 
@@ -126,7 +129,8 @@ class FieldValueConverterTest extends TestCase
                     'allowedTargetsInternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB, Type::TARGET_EMBED, Type::TARGET_MODAL],
                     'allowedTargetsExternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB],
                     'enableSuffix' => false,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
         );
@@ -159,7 +163,8 @@ class FieldValueConverterTest extends TestCase
                     'allowedTargetsExternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB],
                     'allowedLinkType' => Type::LINK_TYPE_ALL,
                     'enableSuffix' => false,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
         );
@@ -181,7 +186,8 @@ class FieldValueConverterTest extends TestCase
                     'allowedTargetsExternal' => [Type::TARGET_LINK, Type::TARGET_LINK_IN_NEW_TAB],
                     'allowedLinkType' => Type::LINK_TYPE_ALL,
                     'enableSuffix' => false,
-                    'enableLabel' => true,
+                    'enableLabelInternal' => true,
+                    'enableLabelExternal' => true,
                 ],
             ],
         );

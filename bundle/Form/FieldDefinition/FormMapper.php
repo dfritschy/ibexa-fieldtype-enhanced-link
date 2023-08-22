@@ -62,11 +62,18 @@ class FormMapper extends AbstractRelationFormMapper
             'property_path' => 'fieldSettings[enableSuffix]',
         ]);
 
-        $fieldDefinitionForm->add('enableLabel', CheckboxType::class, [
+        $fieldDefinitionForm->add('enableLabelInternal', CheckboxType::class, [
             'required' => false,
-            'label' => /* @Desc("Enable label") */ 'field_definition.ngenhancedlink.enable_label',
-            'property_path' => 'fieldSettings[enableLabel]',
-            'data' => $data->fieldSettings && array_key_exists('enableLabel', $data->fieldSettings) ? $data->fieldSettings['enableLabel'] : true,
+            'label' => /* @Desc("Enable label") */ 'field_definition.ngenhancedlink.enable_label_internal',
+            'property_path' => 'fieldSettings[enableLabelInternal]',
+            'data' => $data->fieldSettings && array_key_exists('enableLabelInternal', $data->fieldSettings) ? $data->fieldSettings['enableLabelInternal'] : true,
+        ]);
+
+        $fieldDefinitionForm->add('enableLabelExternal', CheckboxType::class, [
+            'required' => false,
+            'label' => /* @Desc("Enable label") */ 'field_definition.ngenhancedlink.enable_label_external',
+            'property_path' => 'fieldSettings[enableLabelExternal]',
+            'data' => $data->fieldSettings && array_key_exists('enableLabelExternal', $data->fieldSettings) ? $data->fieldSettings['enableLabelExternal'] : true,
         ]);
 
         $fieldDefinitionForm->add('allowedTargetsInternal', ChoiceType::class, [

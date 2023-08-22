@@ -93,7 +93,7 @@ class FieldValueType extends AbstractType
             );
         }
 
-        if ($options['enable_label']) {
+        if ($options['enable_label_internal']) {
             $builder->add(
                 'label_internal',
                 TextType::class,
@@ -102,7 +102,9 @@ class FieldValueType extends AbstractType
                     'required' => false,
                 ],
             );
+        }
 
+        if ($options['enable_label_external']) {
             $builder->add(
                 'label_external',
                 TextType::class,
@@ -206,14 +208,16 @@ class FieldValueType extends AbstractType
             'root_default_location' => null,
             'location' => null,
             'enable_suffix' => null,
-            'enable_label' => null,
+            'enable_label_internal' => null,
+            'enable_label_external' => null,
             'target_internal' => [],
             'target_external' => [],
         ]);
         $resolver->setAllowedTypes('default_location', ['null', Location::class]);
         $resolver->setAllowedTypes('root_default_location', ['null', 'bool']);
         $resolver->setAllowedTypes('enable_suffix', ['null', 'bool']);
-        $resolver->setAllowedTypes('enable_label', ['null', 'bool']);
+        $resolver->setAllowedTypes('enable_label_internal', ['null', 'bool']);
+        $resolver->setAllowedTypes('enable_label_external', ['null', 'bool']);
         $resolver->setAllowedTypes('location', ['null', Location::class]);
         $resolver->setAllowedTypes('target_internal', ['array']);
         $resolver->setAllowedTypes('target_external', ['array']);
