@@ -112,7 +112,7 @@ class FieldValueConverterTest extends TestCase
                     "link_new_tab"
                 ],
                 "enableSuffix": false,
-                "enableLabelInternal": true
+                "enableLabelInternal": true,
                 "enableLabelExternal": true
             }
             DATATEXT;
