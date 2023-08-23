@@ -51,7 +51,7 @@ class FieldValueTransformer implements DataTransformerInterface
         if ($value['link_type'] === Type::LINK_TYPE_INTERNAL) {
             return new Value(
                 $value['id'],
-                $value['label_internal_internal'] ?? null,
+                $value['label_internal'] ?? null,
                 $value['target_internal'],
                 $value['suffix'] ?? null,
             );
@@ -60,7 +60,7 @@ class FieldValueTransformer implements DataTransformerInterface
         if ($value['link_type'] === Type::LINK_TYPE_EXTERNAL) {
             return new Value(
                 $value['url'],
-                $value['label_external_external'] ?? null,
+                $value['label_external'] ?? null,
                 $value['target_external'],
             );
         }
